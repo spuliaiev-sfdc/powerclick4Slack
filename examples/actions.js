@@ -12,7 +12,7 @@ const app = new App({
 app.command('/helloworld', async ({ ack, payload, context }) => {
   console.log("Command received helloworld");
   // Acknowledge the command request
-  ack();
+  await ack();
 
   try {
     const result = await app.client.chat.postMessage({
@@ -52,7 +52,7 @@ app.command('/helloworld', async ({ ack, payload, context }) => {
 app.action('button_abc', async ({ ack, body, context }) => {
   // Acknowledge the button request
   console.log("Acttion received button_abc");
-  ack();
+  await ack();
 
   try {
     // Update the message
@@ -91,7 +91,6 @@ app.action('button_abc', async ({ ack, body, context }) => {
 app.event('link_shared', async ({ event, client, context }) => {
   console.log("Event received link_shared", event);
   // console.log("Event received link_shared, Client", client);
-  // Acknowledge the command request
 
   try {
 
@@ -209,6 +208,10 @@ app.post('/slack/actions', async(req, res) => {
 });
 */
 
+app.error(async (error) => {
+  // Check the details of the error to handle cases where you should retry sending a message or stop the app
+  console.error('ERROR IN APP WORK', error);
+});
 
 (async () => {
   // Start your app

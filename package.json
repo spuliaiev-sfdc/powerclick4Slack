@@ -9,7 +9,7 @@
     "startModals": "node examples/modals.js"
   },
   "dependencies": {
-    "@slack/bolt": "^1.6.0"
+    "@slack/bolt": "^2.6.1"
   },
   "engines": {
     "node": "11.x"
