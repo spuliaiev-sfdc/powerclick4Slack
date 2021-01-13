@@ -1,11 +1,21 @@
 // This example shows how to listen to a button click
 // It uses slash commands and actions
 // Require the Bolt package (github.com/slackapi/bolt)
-const { App } = require("@slack/bolt");
+const { App, ExpressReceiver } = require('@slack/bolt');
+
+// Create a Bolt Receiver
+const receiver = new ExpressReceiver({ signingSecret: process.env.SLACK_SIGNING_SECRET });
 
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
-  signingSecret: process.env.SLACK_SIGNING_SECRET
+  receiver
+});
+
+// Other web requests are methods on receiver.router
+receiver.router.get('/', (req, res) => {
+  // You're working with an express req and res now.
+  console.log("ROOT Request");
+  res.send('yay!');
 });
 
 // Listen for a slash command invocation

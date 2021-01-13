@@ -1,11 +1,13 @@
 {
-  "name": "bolt-app-template",
-  "version": "0.0.1",
+  "name": "slackathon-powerclick",
+  "version": "0.0.2",
   "description": "A basic template to spin up a Bolt app for Slack",
   "main": "app.js",
   "scripts": {
     "startDefault": "node app.js",
     "start": "node examples/actions.js",
+    "startd1": "node --inspect-brk examples/actions.js",
+    "startd2": "node --inspect examples/actions.js",
     "startModals": "node examples/modals.js"
   },
   "dependencies": {
@@ -15,7 +17,7 @@
     "node": "11.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/bolt-app-template"
+    "url": "https://github.com/spuliaiev-sfdc/slackaton-powerclick"
   },
   "license": "MIT",
   "keywords": [
