@@ -4,21 +4,20 @@
 const { App, ExpressReceiver } = require('@slack/bolt');
 
 // Create a Bolt Receiver
-// const receiver = new ExpressReceiver({ signingSecret: process.env.SLACK_SIGNING_SECRET });
+const receiver = new ExpressReceiver({ signingSecret: process.env.SLACK_SIGNING_SECRET });
 const version = '0.0.1';
 
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
-  signingSecret: process.env.SLACK_SIGNING_SECRET
-  // receiver
+  receiver
 });
 
 // Other web requests are methods on receiver.router
-// receiver.router.get('/', (req, res) => {
+receiver.router.get('/', (req, res) => {
 //   You're working with an express req and res now.
-  // console.log("ROOT Request");
-  // res.send(`This is Slackathon PowerClick Slack App version ${version}`);
-// });
+  console.log("ROOT Request");
+  res.send(`This is Slackathon PowerClick Slack App version ${version} Running in HEROKU`);
+});
 
 // Listen for a slash command invocation
 app.command('/helloworld', async ({ ack, payload, context }) => {
@@ -174,7 +173,7 @@ app.event('app_home_opened', async ({ event, client, context }) => {
             "type": "section",
             "text": {
               "type": "mrkdwn",
-              "text": "*Welcome to your _App's Home_* :tada:"
+              "text": "*Welcome to your _App's Home_* :tada: in the HEROKU!!"
             }
           },
           {

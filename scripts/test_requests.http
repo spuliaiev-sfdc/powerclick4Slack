@@ -61,6 +61,11 @@ Content-Type: application/json
 ###
 POST https://slackaton-powerclick.herokuapp.com/slack/events
 Content-Type: application/json
+host: "slackaton-powerclick.herokuapp.com"
+traceparent: "00-ae25aaf23eff4f6685789b9a01ad3da5-c1d06ba213e37e93-01"
+user-agent: "Slackbot 1.0 (+https://api.slack.com/robots)"
+x-slack-request-timestamp: "1610499221"
+x-slack-signature: "v0=81c5c02e2321731d9cfd94007b7269155a1cacd2d962a849d93d4510a5054911"
 
 { type: 'link_shared',
   user: 'U01J0TUSXQX',
@@ -170,3 +175,111 @@ x-slack-signature: "v0=81c5c02e2321731d9cfd94007b7269155a1cacd2d962a849d93d4510a
 }
 
 ###
+POST https://slackaton-powerclick.herokuapp.com/slack/events
+host: slackaton-powerclick.herokuapp.com
+connection: close
+user-agent: Slackbot 1.0 (+https://api.slack.com/robots)
+accept: */*
+accept-encoding: gzip,deflate
+content-type: application/json
+x-slack-signature: v0=60f98b27041357d0f2c39c2118883218614e2b33e962b7930b16ff85e0fb06d3
+x-slack-request-timestamp: 1610500381
+x-request-id: 1156d66e-a30c-4641-874c-49434748828d
+x-forwarded-for: 54.88.195.115
+x-forwarded-proto: https
+x-forwarded-port: 443
+via: 1.1 vegur
+connect-time: 0
+x-request-start: 1610500381733
+total-route-time: 0
+
+{
+  "token": "E4hOy10O9srRJim6PhofS76J",
+  "team_id": "T01K5GJDHCG",
+  "api_app_id": "A01JFTCMSJF",
+  "event": {
+    "type": "app_home_opened",
+    "user": "U01J0TUSXQX",
+    "channel": "D01JK1R4QCT",
+    "tab": "home",
+    "view": {
+      "id": "V01JR3PBQ5A",
+      "team_id": "T01K5GJDHCG",
+      "type": "home",
+      "blocks": [
+        {
+          "type": "section",
+          "block_id": "4t+C",
+          "text": {
+            "type": "mrkdwn",
+            "text": "*Welcome to your _App's Home_* :tada:",
+            "verbatim": false
+          }
+        },
+        {
+          "type": "divider",
+          "block_id": "fUE0"
+        },
+        {
+          "type": "section",
+          "block_id": "gMax0",
+          "text": {
+            "type": "mrkdwn",
+            "text": "This button won't do much for now but you can set up a listener for it using the `actions()` method and passing its unique `action_id`. See an example in the `examples` folder within your Bolt app.",
+            "verbatim": false
+          }
+        },
+        {
+          "type": "actions",
+          "block_id": "nHo",
+          "elements": [
+            {
+              "type": "button",
+              "action_id": "button_abc",
+              "text": {
+                "type": "plain_text",
+                "text": "Click me ABC!",
+                "emoji": true
+              }
+            }
+          ]
+        }
+      ],
+      "private_metadata": "",
+      "callback_id": "home_view",
+      "state": {
+        "values": {}
+      },
+      "hash": "1610500267.1qeDwWpE",
+      "title": {
+        "type": "plain_text",
+        "text": "View Title",
+        "emoji": true
+      },
+      "clear_on_close": false,
+      "notify_on_close": false,
+      "close": null,
+      "submit": null,
+      "previous_view_id": null,
+      "root_view_id": "V01JR3PBQ5A",
+      "app_id": "A01JFTCMSJF",
+      "external_id": "",
+      "app_installed_team_id": "T01K5GJDHCG",
+      "bot_id": "B01JFNJAK5K"
+    },
+    "event_ts": "1610500381.707098"
+  },
+  "type": "event_callback",
+  "event_id": "Ev01K9MQREHE",
+  "event_time": 1610500381,
+  "authorizations": [
+    {
+      "enterprise_id": null,
+      "team_id": "T01K5GJDHCG",
+      "user_id": "U01JJR38USW",
+      "is_bot": true,
+      "is_enterprise_install": false
+    }
+  ],
+  "is_ext_shared_channel": false
+}
