@@ -72,7 +72,7 @@ app.action('button_abc', async ({ ack, body, context }) => {
       const result = await app.client.chat.update({
         token: context.botToken,
         // ts of message to update
-        ts: body.message ? body.message.ts : body.actions?body.actions[0].action_ts : 0,
+        ts: body.message.ts,
         // Channel of message
         channel: body.channel.id,
         blocks: [

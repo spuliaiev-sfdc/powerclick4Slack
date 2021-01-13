@@ -5,13 +5,12 @@
   "main": "app.js",
   "scripts": {
     "startDefault": "node app.js",
-    "start": "node --inspect examples/actions.js",
-    "startd1": "node --inspect-brk examples/actions.js",
-    "startd2": "node --inspect examples/actions.js",
-    "startModals": "node examples/modals.js"
+    "start": "node --inspect app.js",
+    "startd": "node --inspect app.js"
   },
   "dependencies": {
-    "@slack/bolt": "^2.6.1"
+    "@slack/bolt": "^2.6.1",
+    "properties-reader": "^2.2.0"
   },
   "engines": {
     "node": "11.x"
