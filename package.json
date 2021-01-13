@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "startDefault": "node app.js",
-    "start": "node examples/actions.js",
+    "start": "node --inspect examples/actions.js",
     "startd1": "node --inspect-brk examples/actions.js",
     "startd2": "node --inspect examples/actions.js",
     "startModals": "node examples/modals.js"

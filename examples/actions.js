@@ -5,6 +5,7 @@ const { App, ExpressReceiver } = require('@slack/bolt');
 
 // Create a Bolt Receiver
 const receiver = new ExpressReceiver({ signingSecret: process.env.SLACK_SIGNING_SECRET });
+const version = '0.0.1';
 
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
@@ -15,7 +16,7 @@ const app = new App({
 receiver.router.get('/', (req, res) => {
   // You're working with an express req and res now.
   console.log("ROOT Request");
-  res.send('yay!');
+  res.send(`This is Slackathon PowerClick Slack App version $version`);
 });
 
 // Listen for a slash command invocation
@@ -206,17 +207,6 @@ app.event('app_home_opened', async ({ event, client, context }) => {
     console.error(error);
   }
 });
-
-// Test Actions
-/*
-app.post('/slack/actions', async(req, res) => {
-  console.log('Generic Action Received '+req.body.payload);
-  const { token, trigger_id, user, actions, type } = JSON.parse(req.body.payload);
-  if(actions && actions[0].action_id.match(/add_/)) {
-    // openModal(trigger_id);
-  }
-});
-*/
 
 app.error(async (error) => {
   // Check the details of the error to handle cases where you should retry sending a message or stop the app
