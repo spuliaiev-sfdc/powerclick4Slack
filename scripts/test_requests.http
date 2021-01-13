@@ -1,0 +1,172 @@
+GET https://slackaton-powerclick.herokuapp.com/slack/events
+
+
+###
+POST https://slackaton-powerclick.herokuapp.com/slack/events
+Content-Type: application/json
+
+{ type: "block_actions",
+  user:
+  { id: "U01J0TUSXQX",
+    username: "sergii.puliaiev",
+    name: "sergii.puliaiev",
+    team_id: "T01K5GJDHCG" },
+  api_app_id: "A01JFTCMSJF",
+  token: "E4hOy10O9srRJim6PhofS76J",
+  container: { type: "view", view_id: "V01JR3PBQ5A" },
+  trigger_id:
+  "1638004540564.1651562459424.f950daea78cd6e592c5181e7e25ef3d5",
+  team: { id: "T01K5GJDHCG", domain: "sergiipuliaievgm" },
+  enterprise: null,
+  is_enterprise_install: false,
+  view:
+  { id: "V01JR3PBQ5A",
+    team_id: "T01K5GJDHCG",
+    type: "home",
+    blocks: [ [Object], [Object], [Object], [Object] ],
+    private_metadata: "",
+    callback_id: "home_view",
+    state: { values: {} },
+    hash: "1610498506.mJTdDDYk",
+    title: { type: "plain_text", text: "View Title", emoji: true },
+    clear_on_close: false,
+    notify_on_close: false,
+    close: null,
+    submit: null,
+    previous_view_id: null,
+    root_view_id: "V01JR3PBQ5A",
+    app_id: "A01JFTCMSJF",
+    external_id: "",
+    app_installed_team_id: "T01K5GJDHCG",
+    bot_id: "B01JFNJAK5K" },
+  actions:
+  [ { action_id: "button_abc",
+    block_id: "6fkK",
+    text: [Object],
+    type: "button",
+    action_ts: "1610498524.023817" } ]
+}
+
+
+###
+POST https://slackaton-powerclick.herokuapp.com/slack/events
+Content-Type: application/json
+
+{ type: 'app_home_opened',
+  user: 'U01J0TUSXQX',
+  channel: 'D01JK1R4QCT',
+  tab: 'messages',
+  event_ts: '1610498643.961770' }
+
+###
+POST https://slackaton-powerclick.herokuapp.com/slack/events
+Content-Type: application/json
+
+{ type: 'link_shared',
+  user: 'U01J0TUSXQX',
+  channel: 'D01JK1R4QCT',
+  message_ts: '1610498682.009100',
+  links:
+   [ { url:
+        'https://kodama.eng.sfdc.net/api/v1/file-detail/p4-path/%2F%2Fapp%2Fmain%2Fcore%2Fui-services-private%2Fjava%2Fsrc%2Fui%2Fservices%2Finternal%2Futils%2Fimpl%2FLayoutUtilImpl.java',
+       domain: 'kodama.eng.sfdc.net' } ],
+  is_bot_user_member: true,
+  event_ts: '1610498683.446647' }
+
+
+###
+POST https://slackaton-powerclick.herokuapp.com/slack/events
+Content-Type: application/json
+accept: "application/json,*/*"
+accept-encoding: "gzip,deflate"
+host: "rightful-sleepy-hardcover.glitch.me"
+traceparent: "00-ae25aaf23eff4f6685789b9a01ad3da5-c1d06ba213e37e93-01"
+user-agent: "Slackbot 1.0 (+https://api.slack.com/robots)"
+x-slack-request-timestamp: "1610499221"
+x-slack-signature: "v0=81c5c02e2321731d9cfd94007b7269155a1cacd2d962a849d93d4510a5054911"
+
+{
+  "type": "block_actions",
+  "user": {
+    "id": "U01J0TUSXQX",
+    "username": "sergii.puliaiev",
+    "name": "sergii.puliaiev",
+    "team_id": "T01K5GJDHCG"
+  },
+  "api_app_id": "A01JFTCMSJF",
+  "token": "E4hOy10O9srRJim6PhofS76J",
+  "container": {
+    "type": "message_attachment",
+    "message_ts": "1610484271.008100",
+    "attachment_id": 1,
+    "channel_id": "D01JK1R4QCT",
+    "is_ephemeral": false,
+    "is_app_unfurl": true,
+    "app_unfurl_url": "https://kodama.eng.sfdc.net/api/v1/file-detail/p4-path/%2F%2Fapp%2Fmain%2Fcore%2Fui-services-private%2Fjava%2Fsrc%2Fui%2Fservices%2Finternal%2Futils%2Fimpl%2FLayoutUtilImpl.java"
+  },
+  "trigger_id": "1632065903427.1651562459424.ee2b07cc8d7886b6191e85523ad866fd",
+  "team": {
+    "id": "T01K5GJDHCG",
+    "domain": "sergiipuliaievgm"
+  },
+  "enterprise": null,
+  "is_enterprise_install": false,
+  "channel": {
+    "id": "D01JK1R4QCT",
+    "name": "directmessage"
+  },
+  "app_unfurl": {
+    "id": 1,
+    "blocks": [
+      {
+        "type": "section",
+        "block_id": "C6cy",
+        "text": {
+          "type": "mrkdwn",
+          "text": "Detected domain <http://kodama.eng.sfdc.net|kodama.eng.sfdc.net>",
+          "verbatim": false
+        },
+        "accessory": {
+          "type": "image",
+          "image_url": "https://gentle-buttons.com/img/carafe-filled-with-red-wine.png",
+          "alt_text": "Stein's wine carafe"
+        }
+      },
+      {
+        "type": "actions",
+        "block_id": "LATR/",
+        "elements": [
+          {
+            "type": "button",
+            "action_id": "button_abc",
+            "text": {
+              "type": "plain_text",
+              "text": "Click me ABC!",
+              "emoji": true
+            }
+          }
+        ]
+      }
+    ],
+    "fallback": "[no preview available]",
+    "bot_id": "B01JFNJAK5K",
+    "app_unfurl_url": "https://kodama.eng.sfdc.net/api/v1/file-detail/p4-path/%2F%2Fapp%2Fmain%2Fcore%2Fui-services-private%2Fjava%2Fsrc%2Fui%2Fservices%2Finternal%2Futils%2Fimpl%2FLayoutUtilImpl.java",
+    "is_app_unfurl": true
+  },
+  "response_url": "https://hooks.slack.com/actions/T01K5GJDHCG/1631860052066/nudu7WIQ69T1BEaZZL2eldyO",
+  "actions": [
+    {
+      "action_id": "button_abc",
+      "block_id": "LATR/",
+      "text": {
+        "type": "plain_text",
+        "text": "Click me ABC!",
+        "emoji": true
+      },
+      "type": "button",
+      "action_ts": "1610499221.893278"
+    }
+  ]
+}
+
+###

@@ -1,1 +1,3 @@
+# When Bash prompt appear - press CTRL-C - and forwarding will start
+heroku ps:exec
 heroku ps:forward 9229 
