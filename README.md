@@ -19,4 +19,31 @@ Read the [Getting Started guide](https://api.slack.com/start/building/bolt)
 Read the [Bolt documentation](https://slack.dev/bolt)
 -------------------
 
+
+Debug in  InteliiJ
+-------------------
+Add new Node Application with the following parameters:
+* Node interpreter (Add as Local):
+  `node_modules/.bin/nodemon`
+* Node parameters:
+  
+  `--inspect-brk`
+* Javascript:
+  
+  `app.js`
+  
+And RUN this configuration.
+
+Add another configuration:
+* type:
+  
+    `Attach to NodeJS/Chrome`
+* Reconnect automatically:
+  
+    `Yes`
+
+And Run it connect with debug support - it will reconnect when nodemon restarts to accommodate your files changes!
+
+
+
 \ ゜o゜)ノ

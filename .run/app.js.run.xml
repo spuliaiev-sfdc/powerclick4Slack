@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="app.js" type="NodeJSConfigurationType" path-to-node="$PROJECT_DIR$/node_modules/.bin/nodemon" nameIsGenerated="true" node-parameters="--inspect-brk" path-to-js-file="app.js" working-dir="$PROJECT_DIR$">
+    <envs>
+      <env name="SLACK_BOT_TOKEN" value="xoxb-1651562459424-1630853300914-F9CiPnMlbcsx81wuN7MRdvbo" />
+      <env name="SLACK_SIGNING_SECRET" value="a8b04588e1b4660e7944f625bcf42a96" />
+      <env name="SLACK_SOCKET_APP_TOKEN" value="xapp-1-A01JFTCMSJF-1635251543762-f886ccd27c8cb49a7a4ffb08038a1ee05321b6ab6ba478c7e02aec88a8b7af62" />
+    </envs>
+    <method v="2" />
+  </configuration>
+</component>

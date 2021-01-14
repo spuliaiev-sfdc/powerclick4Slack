@@ -6,10 +6,11 @@
   "scripts": {
     "startDefault": "node app.js",
     "start": "node --inspect app.js",
-    "startd": "node --inspect app.js"
+    "startd": "nodemon --inspect app.js"
   },
   "dependencies": {
     "@slack/bolt": "^3.0.0",
+    "nodemon": "^2.0.7",
     "properties-reader": "^2.2.0"
   },
   "engines": {
