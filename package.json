@@ -9,11 +9,11 @@
     "startd": "node --inspect app.js"
   },
   "dependencies": {
-    "@slack/bolt": "^2.6.1",
+    "@slack/bolt": "^3.0.0",
     "properties-reader": "^2.2.0"
   },
   "engines": {
-    "node": "11.x"
+    "node": "14"
   },
   "repository": {
     "url": "https://github.com/spuliaiev-sfdc/slackaton-powerclick"

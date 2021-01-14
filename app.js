@@ -1,26 +1,42 @@
 // This example shows how to listen to a button click
 // It uses slash commands and actions
 // Require the Bolt package (github.com/slackapi/bolt)
-const { App, ExpressReceiver } = require('@slack/bolt');
-const configReader = require("./lib/configReader")
+const version = '0.0.2';
+// modeSocket:
+// true  for Socket app
+// false for Events app
+const modeSocket = true;
 
-// Create a Bolt Receiver
-const receiver = new ExpressReceiver({ signingSecret: process.env.SLACK_SIGNING_SECRET });
-const version = '0.0.1';
+const { App, ExpressReceiver, LogLevel, SocketModeReceiver } = require('@slack/bolt');
+const configReader = require("./lib/configReader")
+// Create a Bolt Receiver for Events
+const receiver = new ExpressReceiver({
+  signingSecret: process.env.SLACK_SIGNING_SECRET,
+  token: process.env.SLACK_BOT_TOKEN
+});
+// Create a Bolt Receiver for Socket mode
+const socketModeReceiver = new SocketModeReceiver({
+  signingSecret: process.env.SLACK_SIGNING_SECRET,
+  token: process.env.SLACK_SOCKET_APP_TOKEN,
+  appToken: process.env.SLACK_SOCKET_APP_TOKEN
+});
 
 const app = new App({
+  receiver: modeSocket? socketModeReceiver : receiver,
   token: process.env.SLACK_BOT_TOKEN,
-  receiver
+  appToken: process.env.SLACK_SOCKET_APP_TOKEN
 });
 
 const config = configReader.readConfig();
 
-// Other web requests are methods on receiver.router
-receiver.router.get('/', (req, res) => {
-//   You're working with an express req and res now.
-  console.log("ROOT Request");
-  res.send(`This is Slackathon PowerClick Slack App version ${version} Running in HEROKU`);
-});
+if (!modeSocket) {
+  // Other web requests are methods on receiver.router
+  receiver.router.get('/', (req, res) => {
+    //   You're working with an express req and res now.
+    console.log("ROOT Request");
+    res.send(`This is Slackathon PowerClick Slack App version ${version} Running in LOCAL`);
+  });
+}
 
 // Listen for a slash command invocation
 
@@ -39,10 +55,15 @@ app.error(async (error) => {
   console.error('ERROR IN APP WORK', error);
 });
 
+const port = process.env.PORT || 3000;
+
 (async () => {
   // Start your app
-  const port = process.env.PORT || 3000;
-  console.log(`Starting app on port ${port}`);
+  if (modeSocket) {
+    console.log(`Starting Socket app on port ${port}`);
+  } else {
+    console.log(`Starting Events app on port ${port}`);
+  }
   await app.start(port);
 
   console.log('⚡️ Bolt app Actions is running!');
