@@ -11,7 +11,8 @@
   "dependencies": {
     "@slack/bolt": "^3.0.0",
     "nodemon": "^2.0.7",
-    "properties-reader": "^2.2.0"
+    "properties-reader": "^2.2.0",
+    "request": "^2.88.2"
   },
   "engines": {
     "node": "14"
