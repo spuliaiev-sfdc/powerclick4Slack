@@ -4,6 +4,9 @@
 Hi, I am Sergii from ECC backend team.
 My current project is a Slack plugin. Slack is a great system to collaborate withing company
 and my plugin allows to make different systems in such huge company as Salesforce a bit closer to each other.
+This idea came from my previous Hack days projects -
+PowerClick bookmarklet for Browsers and
+PowerClick plugin for IntelliJ.
 
 For example - when we referencing some work item we post it's url into Slack.
 Like that:
@@ -19,17 +22,20 @@ Another case - let's say your manager asks to take a look at the failing test:
 
 And you immediately see the links to the file
 in Swarm to check the file history
-in Kodama to verify it's ownership
+in CodeSearch to see the actual content of the file
 in AutomationPortal to see the history of failures
-The content of the file in the CodeSearch
-And even a link to open this file in your locally running IntelliJ IDE (If you installed the PowerClick addon already)
-Also - you get information about which team owns it and link to a report which other files this team owns.
 
-It's a huge time-saver.
+in Kodama to verify it's ownership
+Also - you get information about which team owns it and link to a report with the list of files this team owns.
+
+And even a link to open this file in your locally running IntelliJ IDE (If you have installed the PowerClick plugin already).
+There you can go to particular method and get its history of executions.
+
+That's a huge time-saver.
 
 And this kind of information you can get on any Java class using command JavaClass:
 /javaclass NetworkMemberGroupDataObject
-/javaclass PersonAccountFlowTest.testPersonAccountLookupFlow
+/javaclass PersonAccountFlowTest
 
 And it works both ways - I mean that tracking of URL for CodeSearch, Kodama, Swarm works the same way
 See these files:
