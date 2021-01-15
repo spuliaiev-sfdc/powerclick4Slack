@@ -44,6 +44,10 @@ app.command('/work', require ('./lib/gusWorkAction.js')(app, config).process);
 
 app.command('/helloworld', require ('./lib/commandHelloWorld.js')(app, config).process);
 
+app.command('/entity', require ('./lib/commandEntity.js')(app, config).process);
+
+app.command('/javaclass', require ('./lib/commandJavaClass.js')(app, config).process);
+
 // You must set up a Request URL under Interactive Components on your app configuration page
 app.action('button_abc', require('./lib/buttonAction.js')(app, config).process);
 
