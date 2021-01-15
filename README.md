@@ -14,6 +14,36 @@ List of supported systems:
 
 See the demo video [HERE](https://spuliaiev-sfdc.github.io/powerclick4Slack/docs/Hackday-Slack-2021-01-14_22-26-17.mp4)
 
+Features
+-------------------
+Tracking the links to supported systems and providing links to relevant systems.
+
+* Work Item mentioned. Enhanced with link to Work Item in GUS and list of related Test Failures in AutomationPortal:
+    ![Screenshot](./docs/workitems.png)
+
+* Class files references, Test files references. Enhanced with links to:
+  * Swarm for change history
+  * CodeSearch for file content
+  * AutomationPortal for test method history (If method is provided and starting with `test`)
+  * Kodama to get information about ownership  
+  * Owning team information and link to report with other files owned by team
+  * IntelliJ IDE link to open in editor (If [PowerClick IntelliJ plugin](https://git.soma.salesforce.com/pages/intellij/powerclick/#intelliJ_menu) is [installed](http://localhost:63342/api/installPlugin?action=install&pluginId=com.salesforce.powerclick))  
+  ![Screenshot](./docs/link_shared.png)
+
+Additionally, new command introduced to search for java classes, which provides similar features: 
+
+`/javaclass NetworkMemberGroupDataObject`
+
+![Screenshot](./docs/command_javaclass.png)
+
+
+Plans
+-------------------
+* Add fetching information from GUS to provide also meaninful information for GUS URLs like 
+`https://gus.lightning.force.com/lightning/r/ADM_Work__c/a07B0000008Wc38IAC/view`
+* Fetching information from SWARM about reviews and changes
+* Detection off the WorkItems in messages (by format like `W-<number>` and `SA-<number>`)
+
 References:
 -------------------
 
