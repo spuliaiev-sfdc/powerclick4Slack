@@ -1,24 +1,33 @@
-Bolt app template
+PowerClick for Slack 
 =================
 
-[Bolt](https://slack.dev/bolt) is our framework that lets you build JavaScript-based Slack apps in a flash.
+This extension is adding support of PowerClick for Salesforce into Slack.
+It allows to catch the URL mentioned in the channel leading to some Salesforce systems and provide additional references to other systems.
 
-This project is a simple app template to make it easy to create your first Bolt app. Read our [Getting Started with Bolt](https://api.slack.com/start/building/bolt) guide for a more in-depth tutorial
+List of supported systems:
+-------------------
+* [Automation Portal](https://portal.prod.ci.sfdc.net/)
+* [SWARM](https://swarm.soma.salesforce.com)
+* [CodeSearch](https://codesearch.data.sfdc.net/source/)
+* [KODAMA](https://kodama.eng.sfdc.net/)
+* [IntelliJ IDE](https://www.jetbrains.com/idea/) ( [GUS Support group](https://gus.lightning.force.com/lightning/r/CollaborationGroup/0F9B000000000GnKAI/view) )
 
-Your Project
-------------
+See the demo video [HERE](./docs/Hackday-Slack-2021-01-14_22-26-17.mp4)
 
-- `app.js` contains the primary Bolt app. It imports the Bolt package (`@slack/bolt`) and starts the Bolt app's server. It's where you'll add your app's listeners.
-- `.env` is where you'll put your Slack app's authorization token and signing secret.
-- The `examples/` folder contains a couple of other sample apps that you can peruse to your liking. They show off a few platform features that your app may want to use.
-
-
-Read the [Getting Started guide](https://api.slack.com/start/building/bolt)
+References:
 -------------------
 
-Read the [Bolt documentation](https://slack.dev/bolt)
--------------------
+* **PowerClick for Browsers** [See how to use](https://git.soma.salesforce.com/pages/intellij/powerclick/#browser_menu)
+  
+  Drag the bookmarklet from the web site to your browser bookmarks bar to use it for different salesforce web tools!
 
+
+* **PowerClick for IntelliJ** [See how to use](https://git.soma.salesforce.com/pages/intellij/powerclick/#intelliJ_menu)
+  
+  Click on this link to automatically install it into the IntelliJ IDE! <http://localhost:63342/api/installPlugin?action=install&pluginId=com.salesforce.powerclick|Install>
+
+
+* **PowerClick for Slack** [Git Repository](https://github.com/spuliaiev-sfdc/powerclick4Slack)
 
 Debug in  InteliiJ
 -------------------
