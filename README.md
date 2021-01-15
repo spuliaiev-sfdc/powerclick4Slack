@@ -12,7 +12,7 @@ List of supported systems:
 * [KODAMA](https://kodama.eng.sfdc.net/)
 * [IntelliJ IDE](https://www.jetbrains.com/idea/) ( [GUS Support group](https://gus.lightning.force.com/lightning/r/CollaborationGroup/0F9B000000000GnKAI/view) )
 
-See the demo video [HERE](./docs/Hackday-Slack-2021-01-14_22-26-17.mp4)
+See the demo video [HERE](https://spuliaiev-sfdc.github.io/powerclick4Slack/docs/Hackday-Slack-2021-01-14_22-26-17.mp4)
 
 References:
 -------------------
@@ -24,7 +24,7 @@ References:
 
 * **PowerClick for IntelliJ** [See how to use](https://git.soma.salesforce.com/pages/intellij/powerclick/#intelliJ_menu)
   
-  Click on this link to automatically install it into the IntelliJ IDE! <http://localhost:63342/api/installPlugin?action=install&pluginId=com.salesforce.powerclick|Install>
+  Click on this link to automatically install it into the IntelliJ IDE! [Install](http://localhost:63342/api/installPlugin?action=install&pluginId=com.salesforce.powerclick)
 
 
 * **PowerClick for Slack** [Git Repository](https://github.com/spuliaiev-sfdc/powerclick4Slack)
