@@ -57,7 +57,7 @@ References:
   Click on this link to automatically install it into the IntelliJ IDE! [Install](http://localhost:63342/api/installPlugin?action=install&pluginId=com.salesforce.powerclick)
 
 
-* **PowerClick for Slack** [Git Repository](https://github.com/spuliaiev-sfdc/powerclick4Slack)
+* **PowerClick for Slack** [Git Repository](https://github.com/spuliaiev-sfdc/powerclick4Slack) [Site] (https://spuliaiev-sfdc.github.io/powerclick4Slack/)
 
 Debug in  InteliiJ
 -------------------
