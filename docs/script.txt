@@ -1,0 +1,37 @@
+4 minutes
+
+
+Hi, I am Sergii from ECC backend team.
+My current project is a Slack plugin. Slack is a great system to collaborate withing company
+and my plugin allows to make different systems in such huge company as Salesforce a bit closer to each other.
+
+For example - when we referencing some work item we post it's url into Slack.
+Like that:
+| He folks, take a look at these work items they has a lot of bugs:
+| https://portal.prod.ci.sfdc.net/testfailures/bughandlerreport?bugNumber=W-8269157
+| https://gus.my.salesforce.com/apex/ADM_WorkLocator?bugorworknumber=W-7882440
+My plugin will catch this post and enhance it with additional link - like to AutomationPortal - so you do not need to go to the GUS only then to AutomationPortal.
+I am working on catching the messages without url - by simply identifying them by prefix W-
+
+Another case - let's say your manager asks to take a look at the failing test:
+| Please take a look - it's failing for a long time:
+| https://portal.prod.ci.sfdc.net/testhistory?loadLimit=50&pageType=status&testClass=conversation.library.SharingRecordCollectionInsertFTest&testName=testSaveUnderDifferentContextUserWithOwnerSpecified
+
+And you immediately see the links to the file
+in Swarm to check the file history
+in Kodama to verify it's ownership
+in AutomationPortal to see the history of failures
+The content of the file in the CodeSearch
+And even a link to open this file in your locally running IntelliJ IDE (If you installed the PowerClick addon already)
+Also - you get information about which team owns it and link to a report which other files this team owns.
+
+It's a huge time-saver.
+
+And this kind of information you can get on any Java class using command JavaClass:
+/javaclass NetworkMemberGroupDataObject
+/javaclass PersonAccountFlowTest.testPersonAccountLookupFlow
+
+And it works both ways - I mean that tracking of URL for CodeSearch, Kodama, Swarm works the same way
+See these files:
+https://codesearch.data.sfdc.net/source/xref/app_main_core//app/main/core/aloha-ui/java/src/moduleapi/networks/NetworksSetupService.java
+https://kodama.eng.sfdc.net/api/v1/file-detail/p4-path/%2F%2Fapp%2Fmain%2Fcore%2Faloha-ui%2Fjava%2Fsrc%2Fmoduleapi%2Fnetworks%2FNetworksSiteService.java
